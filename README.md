@@ -34,10 +34,10 @@ This repository contains materials for analyzing the population-weighted coverag
 
 ## Positions I'm considered for:
 
-- Learning and Skills Data Analyst Consultant
+- Learning and Skills Data Analyst Consultant - Req 581598
 
-- Household Survey Data Analyst Consultant
+- Roster of quantitative and qualitative research consultants: Social & Economic Policy unit - Req 580413
 
-- Administrative Data Analyst
+- Data Analytics and Statistical support Consultancy/Monitoring Unit - Req 581443
 
-- Microdata Harmonization Consultant
+- Long-Term Agreement (LTA) for Household Survey & Sampling Expert Consultants, Data and Analytics (D&A) - Req 581382
