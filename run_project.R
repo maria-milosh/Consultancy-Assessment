@@ -1,15 +1,4 @@
 
-# Setup -------------------------------------------------------------------
-
-# install pacman if needed
-if (!requireNamespace("pacman", quietly = TRUE)) {
-  install.packages("pacman")
-}
-
-# Load required packages
-pacman::p_load(tidyverse, ggplot2, readxl, countrycode, cowplot,
-               rmarkdown, knitr)
-
 
 # Run user profile script -------------------------------------------------
 

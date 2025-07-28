@@ -6,28 +6,33 @@ This repository contains materials for analyzing the population-weighted coverag
 
 ## Repository Structure
 
-There are the following folders:
++ `data`
 
-1. 01_rawdata - this is the original folder with data, which I left as is.
-2. 02_additionaldata - this contrains the indicator data. In order to not mess with the original structure (`01_rawdata` which was provided), I did not create a standalone `data` folder, and downloaded all additional data here.
-3. script: this folder contains:
-    + analysis.Rmd: the main R Markdown file
-    + utils.R: installs packages
-4. outputs:
-    + analysis.html: the final report for reading.
+    + `01_rawdata`: Original folder with data, which I left as is.
+    + `02_additionaldata`: Contains the indicators downloaded from the UNICEF Data Warehouse.
 
-And the following files:
-1. Consultancy-Assessment.Rproj is the r project file.
-2. README.md is the repository overview and instructions.
++ `script`
+
+    + `analysis.Rmd`: R Markdown file with data cleaning, analysis, and visualization.
+
++ `outputs`
+
+    + `analysis.html`: Final report.
+    + `coverage_comparison.png`: Bar plot.
+
++ `Consultancy-Assessment.Rproj`: R project file.
++ `user_profile.R`: Installs required packages if needed and sets.
++ `run_project.R`: Runs the main analysis and saves.
++ `README.md`: This file.
 
 
-### To reproduce the full analysis:
+## To reproduce the full analysis:
 
-1. Clone the repository to your workspace from ... and change directory to the cloned folder.
+1. Clone the repository to your workspace and change directory to the cloned folder.
 2. In terminal run: `Rscript run_project.R`. Make sure that Pandoc is installed and accessible in your system's PATH environment variable.
 
 
-# Positions I'm considered for:
+## Positions I'm considered for:
 
 - Learning and Skills Data Analyst Consultant
 

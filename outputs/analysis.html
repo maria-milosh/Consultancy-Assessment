@@ -378,7 +378,7 @@ Off-Track categories, according to the following rule:</p>
 <li>On-track if Status.U5MR is “achieved” or “on-track”</li>
 <li>Off-track if Status.U5MR is “acceleration needed”</li>
 </ul>
-<pre class="r"><code>track &lt;- read_excel(&#39;../01_rawdata/On-track and off-track countries.xlsx&#39;)
+<pre class="r"><code>track &lt;- read_excel(&#39;../data/01_rawdata/On-track and off-track countries.xlsx&#39;)
 table(track$Status.U5MR)</code></pre>
 <pre><code>## 
 ## Acceleration Needed            Achieved            On Track 
@@ -400,7 +400,7 @@ by multiplying by 1000. Finally, I use the <code>countrycode</code>
 package to convert the <code>Location code</code> to ISO3 codes - this
 is needed for further merging across data sets. I store the result in a
 new data frame <code>demographic_proj</code>.</p>
-<pre class="r"><code>demographic &lt;- read_excel(&#39;../01_rawdata/WPP2022_GEN_F01_DEMOGRAPHIC_INDICATORS_COMPACT_REV1.xlsx&#39;, skip = 16,
+<pre class="r"><code>demographic &lt;- read_excel(&#39;../data/01_rawdata/WPP2022_GEN_F01_DEMOGRAPHIC_INDICATORS_COMPACT_REV1.xlsx&#39;, skip = 16,
                           sheet = &#39;Projections&#39;)
 demographic %&gt;% 
     filter(Year == 2022) %&gt;% 
@@ -417,7 +417,7 @@ indicator name from the <code>REF_AREA:Geographic area</code> and
 <code>INDICATOR:Indicator</code> columns, and filter for the most recent
 year for each country and indicator. Finally, I convert the observation
 value to a share (not per cent) by dividing by 100.</p>
-<pre class="r"><code>indicators &lt;- read_csv(&#39;../02_additionaldata/fusion_GLOBAL_DATAFLOW_UNICEF_1.0_.MNCH_ANC4+MNCH_SAB..csv&#39;, show_col_types = FALSE)
+<pre class="r"><code>indicators &lt;- read_csv(&#39;../data/02_additionaldata/fusion_GLOBAL_DATAFLOW_UNICEF_1.0_.MNCH_ANC4+MNCH_SAB..csv&#39;, show_col_types = FALSE)
 indicators %&gt;% 
     rename(&#39;indicator_year&#39; = &#39;TIME_PERIOD:Time period&#39;) %&gt;% 
     mutate(ISO3Code = str_extract(`REF_AREA:Geographic area`, &#39;^.*(?=\\:)&#39;),

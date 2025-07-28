@@ -34,7 +34,7 @@ Read the excel file and re-classify the countries into On-Track and Off-Track ca
 + Off-track if Status.U5MR is "acceleration needed"
 
 ```{r}
-track <- read_excel('../01_rawdata/On-track and off-track countries.xlsx')
+track <- read_excel('../data/01_rawdata/On-track and off-track countries.xlsx')
 table(track$Status.U5MR)
 
 track %>% 
@@ -52,7 +52,7 @@ The demographic is in an Excel file, and I read it with the `read_excel` functio
 Next, I convert the number of births from thousands to actual numbers by multiplying by 1000. Finally, I use the `countrycode` package to convert the `Location code` to ISO3 codes - this is needed for further merging across data sets. I store the result in a new data frame `demographic_proj`.
 
 ```{r, warning=FALSE}
-demographic <- read_excel('../01_rawdata/WPP2022_GEN_F01_DEMOGRAPHIC_INDICATORS_COMPACT_REV1.xlsx', skip = 16,
+demographic <- read_excel('../data/01_rawdata/WPP2022_GEN_F01_DEMOGRAPHIC_INDICATORS_COMPACT_REV1.xlsx', skip = 16,
                           sheet = 'Projections')
 demographic %>% 
     filter(Year == 2022) %>% 
@@ -68,7 +68,7 @@ demographic %>%
 This is the indicators data from UNICEF. I extract the ISO3 code and indicator name from the `REF_AREA:Geographic area` and `INDICATOR:Indicator` columns, and filter for the most recent year for each country and indicator. Finally, I convert the observation value to a share (not per cent) by dividing by 100.
 
 ```{r, messages=FALSE}
-indicators <- read_csv('../02_additionaldata/fusion_GLOBAL_DATAFLOW_UNICEF_1.0_.MNCH_ANC4+MNCH_SAB..csv', show_col_types = FALSE)
+indicators <- read_csv('../data/02_additionaldata/fusion_GLOBAL_DATAFLOW_UNICEF_1.0_.MNCH_ANC4+MNCH_SAB..csv', show_col_types = FALSE)
 indicators %>% 
     rename('indicator_year' = 'TIME_PERIOD:Time period') %>% 
     mutate(ISO3Code = str_extract(`REF_AREA:Geographic area`, '^.*(?=\\:)'),
