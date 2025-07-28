@@ -21,14 +21,14 @@ This repository contains materials for analyzing the population-weighted coverag
     + `coverage_comparison.png`: Bar plot.
 
 + `Consultancy-Assessment.Rproj`: R project file.
-+ `user_profile.R`: Installs required packages if needed and sets.
++ `user_profile.R`: Installs required packages if needed and sets universal settings.
 + `run_project.R`: Runs the main analysis and saves.
 + `README.md`: This file.
 
 
 ## To reproduce the full analysis:
 
-1. Clone the repository to your workspace and change directory to the cloned folder.
+1. Clone the repository to your work space and change directory to the cloned folder.
 2. In terminal run: `Rscript run_project.R`. Make sure that Pandoc is installed and accessible in your system's PATH environment variable.
 
 

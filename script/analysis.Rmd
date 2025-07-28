@@ -1,7 +1,14 @@
 ---
 title: "Test Assignment"
 date: "`r Sys.Date()`"
-output: html_document
+output: 
+  html_document:
+    theme: cerulean
+    toc: true 
+    toc_depth: 2
+    number_sections: false
+    toc_float: true
+    fig_width: 10
 output_dir: "../outputs"
 output_file: "analysis.html"
 ---
@@ -196,7 +203,7 @@ These numbers show what you'd expect: almost universal skilled attendance at bir
 
 On-track countries have higher population-weighted coverage for both antenatal care and skilled attendance at birth compared to off-track countries - which was expected, because child survival must be correlated with the quality of care during and after birth.
 
-Interestingly, while skilled attendance at birth is nearly universal in on-track countries, antenatal care is only 73%: countries do achieve the on-track status while having a rather low antenatal care coverage, which makes you think that ANC4 is not the the strongest standalone predictor of new-born survival and achieving the on-track status.
+Interestingly, while skilled attendance at birth is nearly universal in on-track countries, antenatal care is only 73%: countries do achieve the on-track status while having a rather low antenatal care coverage.
 
 As a hypothesis, the ANC4 indicator may be capturing two opposing dynamics: access to antenatal services and the need to seek them. In off-track countries, where health systems are weaker and risks to child health are higher (lower vaccination rates, poorer baseline health, exposure violent conflict, etc.), the need for antenatal care should be greater. Yet access is limited.
 
